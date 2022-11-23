@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "580e63c4-fbd9-4b16-a2cb-2c27a3f0d9a5",
+		"name": "Inmuebles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "subir CSV a mongodb",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3800/inmuebles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3800",
+					"path": [
+						"inmuebles",
+						""
+					]
+				},
+				"description": "lee csv y lo sube a moongodb\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Filtro habitaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3800/inmuebles/filtro?Habitaciones=2&precioMax=700&precioMin=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3800",
+					"path": [
+						"inmuebles",
+						"filtro"
+					],
+					"query": [
+						{
+							"key": "Habitaciones",
+							"value": "2"
+						},
+						{
+							"key": "precioMax",
+							"value": "700"
+						},
+						{
+							"key": "precioMin",
+							"value": "0"
+						}
+					]
+				},
+				"description": "filtra Habitaciones"
+			},
+			"response": []
+		},
+		{
+			"name": "Filtro km",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3800/inmuebles/distancia?40.365843&Latitud=40.365843&Longitud=-3.5884521&distancia=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3800",
+					"path": [
+						"inmuebles",
+						"distancia"
+					],
+					"query": [
+						{
+							"key": "40.365843",
+							"value": null
+						},
+						{
+							"key": "Latitud",
+							"value": "40.365843"
+						},
+						{
+							"key": "Longitud",
+							"value": "-3.5884521"
+						},
+						{
+							"key": "distancia",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Filtra por distancias de coordenadas\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR CSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3800/inmuebles/filtroCsv?Habitaciones=2&precioMax=900&precioMin=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3800",
+					"path": [
+						"inmuebles",
+						"filtroCsv"
+					],
+					"query": [
+						{
+							"key": "Habitaciones",
+							"value": "2"
+						},
+						{
+							"key": "precioMax",
+							"value": "900"
+						},
+						{
+							"key": "precioMin",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Crea csv"
+			},
+			"response": []
+		}
+	]
+}
